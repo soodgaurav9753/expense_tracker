@@ -1,9 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
-    {"offset": {"line": 52, "column": 0}, "map": {"version":3,"sources":["file:///D:/website/expense-tracker-redesigned/src/app/api/sign/route.js/proxy.mjs"],"sourcesContent":["import { registerClientReference } from \"react-server-dom-turbopack/server.edge\";\nexport default registerClientReference(\n    function() { throw new Error(\"Attempted to call the default export of [project]/src/app/api/sign/route.js <module evaluation> from the server, but it's on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.\"); },\n    \"[project]/src/app/api/sign/route.js <module evaluation>\",\n    \"default\",\n);\n"],"names":[],"mappings":";;;AAAA;;uCACe,CAAA,GAAA,uPAAA,CAAA,0BAAuB,AAAD,EACjC;IAAa,MAAM,IAAI,MAAM;AAA6R,GAC1T,2DACA","debugId":null}},
-    {"offset": {"line": 66, "column": 0}, "map": {"version":3,"sources":["file:///D:/website/expense-tracker-redesigned/src/app/api/sign/route.js/proxy.mjs"],"sourcesContent":["import { registerClientReference } from \"react-server-dom-turbopack/server.edge\";\nexport default registerClientReference(\n    function() { throw new Error(\"Attempted to call the default export of [project]/src/app/api/sign/route.js from the server, but it's on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.\"); },\n    \"[project]/src/app/api/sign/route.js\",\n    \"default\",\n);\n"],"names":[],"mappings":";;;AAAA;;uCACe,CAAA,GAAA,uPAAA,CAAA,0BAAuB,AAAD,EACjC;IAAa,MAAM,IAAI,MAAM;AAAyQ,GACtS,uCACA","debugId":null}},
-    {"offset": {"line": 80, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}}]
-}
