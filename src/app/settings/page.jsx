@@ -4,6 +4,16 @@ import toast from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
+ const SectionCard = ({ title, icon, children }) => (
+    <div className="card" style={{padding:'28px',marginBottom:'16px'}}>
+      <div style={{display:'flex',alignItems:'center',gap:'10px',marginBottom:'24px'}}>
+        <span style={{fontSize:'20px'}}>{icon}</span>
+        <h2 className="syne" style={{fontSize:'16px',fontWeight:600,color:'var(--text-primary)'}}>{title}</h2>
+      </div>
+      {children}
+    </div>
+  );
+
 export default function SettingsPage() {
   const router = useRouter();
   const [user, setUser] = useState({ name: '', email: '' });
@@ -63,15 +73,7 @@ export default function SettingsPage() {
     } catch { toast.error('Logout failed'); }
   };
 
-  const SectionCard = ({ title, icon, children }) => (
-    <div className="card" style={{padding:'28px',marginBottom:'16px'}}>
-      <div style={{display:'flex',alignItems:'center',gap:'10px',marginBottom:'24px'}}>
-        <span style={{fontSize:'20px'}}>{icon}</span>
-        <h2 className="syne" style={{fontSize:'16px',fontWeight:600,color:'var(--text-primary)'}}>{title}</h2>
-      </div>
-      {children}
-    </div>
-  );
+ 
 
   if (loading) return (
     <div style={{minHeight:'100vh',display:'flex',alignItems:'center',justifyContent:'center'}}>
