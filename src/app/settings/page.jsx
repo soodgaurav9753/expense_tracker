@@ -52,19 +52,7 @@ export default function SettingsPage() {
     finally { setSaving(''); }
   };
 
-  const handleFeedback = async () => {
-    if (!feedback.trim()) return toast.error('Enter feedback');
-    setSaving('feedback');
-    try {
-      const res = await fetch('/api/feedback', {
-        method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: feedback }),
-      });
-      if (res.ok) { toast.success('Feedback sent! Thank you.'); setFeedback(''); }
-      else toast.error('Failed to send');
-    } catch { toast.error('Server error'); }
-    finally { setSaving(''); }
-  };
+
 
   const handleLogout = async () => {
     try {
@@ -124,18 +112,6 @@ export default function SettingsPage() {
           </div>
         </SectionCard>
 
-        {/* Feedback */}
-        <SectionCard title="Send Feedback" icon="💬">
-          <div style={{display:'flex',flexDirection:'column',gap:'14px'}}>
-            <textarea value={feedback} onChange={e => setFeedback(e.target.value)}
-              className="input-field" placeholder="Share your thoughts, suggestions, or report an issue..."
-              rows={4} style={{resize:'vertical',lineHeight:'1.6'}} />
-            <button className="btn-primary" onClick={handleFeedback} disabled={saving==='feedback'}
-              style={{alignSelf:'flex-start',padding:'10px 20px'}}>
-              {saving==='feedback' ? 'Sending...' : 'Send Feedback'}
-            </button>
-          </div>
-        </SectionCard>
 
         {/* Danger Zone */}
         <SectionCard title="Account" icon="⚠️">
