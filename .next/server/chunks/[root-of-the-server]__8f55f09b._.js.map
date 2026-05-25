@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 60, "column": 0}, "map": {"version":3,"sources":["file:///C:/projects/expense-tracker-redesigned/src/app/api/logout/route.js"],"sourcesContent":["// /app/api/logout/route.js\r\nimport { cookies } from 'next/headers';\r\n\r\nexport async function POST() {\r\n  cookies().set('token', '', {\r\n    httpOnly: true,\r\n    expires: new Date(0),\r\n  });\r\n\r\n  return Response.json({ success: true, message: 'Logged out successfully' });\r\n}\r\n"],"names":[],"mappings":"AAAA,2BAA2B;;;;AAC3B;;AAEO,eAAe;IACpB,CAAA,GAAA,iIAAA,CAAA,UAAO,AAAD,IAAI,GAAG,CAAC,SAAS,IAAI;QACzB,UAAU;QACV,SAAS,IAAI,KAAK;IACpB;IAEA,OAAO,SAAS,IAAI,CAAC;QAAE,SAAS;QAAM,SAAS;IAA0B;AAC3E","debugId":null}}]
+}
